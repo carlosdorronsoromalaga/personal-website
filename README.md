@@ -13,8 +13,9 @@ The goal is to build a clear system to document:
 
 → https://carlosdorronsoromalaga.com
 
-The website reflects how I think, build and approach real-world problems.  
-It is continuously evolving as I develop new projects.
+My personal website reflects how I think, build and approach real-world problems.
+
+It’s actively being improved and evolves as I develop new projects.
 
 ---
 
@@ -22,7 +23,35 @@ It is continuously evolving as I develop new projects.
 
 This repository is organized as follows:
 
-```bash
-/pages      → Main website pages (Home, About, Projects, Contact)
-/projects   → Individual project pages
-/build-log  → Notes and thoughts while building
+/pages → Main website sections (Home, About, Projects, Contact)  
+/projects → Individual project pages  
+/build-log → Notes and thoughts while building  
+
+---
+
+## 🚀 Purpose
+
+This repository acts as the content and thinking layer of the website.
+
+Instead of starting with design, everything is first structured here:
+- Ideas are clarified  
+- Projects are defined  
+- Content is written  
+
+Later, this will be translated into the final web experience.
+
+---
+
+## 🧠 Approach
+
+- Start from real problems  
+- Structure ideas clearly  
+- Use AI as a tool for execution  
+- Iterate and improve continuously  
+
+---
+
+## 📌 Status
+
+Currently structuring and building the full portfolio.
+``
