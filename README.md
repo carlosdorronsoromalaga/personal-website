@@ -54,4 +54,4 @@ Later, this will be translated into the final web experience.
 ## 📌 Status
 
 Currently structuring and building the full portfolio.
-``
+
