@@ -1,49 +1,54 @@
-# I build AI-powered products
+# I build AI-native products from idea to real execution
 
-Turning ideas into real-world execution.
-
----
-
-## 🚀 What I’m doing
-
-I’m building a portfolio of AI-native products focused on solving real problems.
-
-Current projects include:
-- AI companion for the elderly  
-- Learning programme generation using AI  
-- Job search automation  
-- End-to-end applications built fully with AI  
+Not just concepts. Not just prototypes.  
+I build, test and iterate AI products in the real world.
 
 ---
 
-## 🧠 How I think
+## About
 
-I approach problems as systems.
+I work at the intersection of AI, business and execution.
 
-- Start from the real problem  
-- Break it down into clear structures  
-- Use AI to accelerate execution  
-- Test in reality, not in theory  
-- Iterate and improve continuously  
+I build independent AI products while also applying AI inside organizations, focusing on adoption, real use cases and impact.
+
+My goal is simple:
+turn ideas into working systems that are actually used.
 
 ---
 
-## 🔧 Projects
+## Projects
+
+A selection of what I am currently building:
+
+- EVA → AI companion for the elderly  
+- EduPath → AI-generated learning programmes (validated and scaling)  
+- JobAgent → automating job search workflows  
+- WorldCup App → fully AI-built application  
 
 → See all projects: `/projects`
 
-Each project represents an attempt to turn an idea into something real.
+---
+
+## How I think
+
+- Start from real problems, not hype  
+- Break complexity into simple systems  
+- Build fast using AI as a core layer  
+- Test in reality, not theory  
+- Iterate continuously  
 
 ---
 
-## ✍️ Build Log
+## Build Log
 
-→ Follow the process: `/build-log`
+Notes and progress while building:
 
-Short notes on what I’m building, learning and thinking as I go.
+→ `/build-log`
 
 ---
 
-## 📫 Contact
+## Contact
 
-→ Get in touch: `/contact`
+If you want to build something or explore ideas:
+
+→ `/contact`
