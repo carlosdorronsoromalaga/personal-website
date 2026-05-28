@@ -5,18 +5,18 @@ I build, test and iterate AI products in the real world.
 
 ---
 
-## About
+## 🧠 About
 
 I work at the intersection of AI, business and execution.
 
 I build independent AI products while also applying AI inside organizations, focusing on adoption, real use cases and impact.
 
-My goal is simple:
+My goal is simple:  
 turn ideas into working systems that are actually used.
 
 ---
 
-## Projects
+## 🚀 Projects
 
 A selection of what I am currently building:
 
@@ -29,7 +29,7 @@ A selection of what I am currently building:
 
 ---
 
-## How I think
+## ⚙️ How I think
 
 - Start from real problems, not hype  
 - Break complexity into simple systems  
@@ -39,7 +39,7 @@ A selection of what I am currently building:
 
 ---
 
-## Build Log
+## 📝 Build Log
 
 Notes and progress while building:
 
@@ -47,7 +47,7 @@ Notes and progress while building:
 
 ---
 
-## Contact
+## 📫 Contact
 
 If you want to build something or explore ideas:
 
