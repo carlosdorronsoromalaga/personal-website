@@ -1,0 +1,337 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About" description="Carlos Dorronsoro Málaga — Industrial Engineer, AI Consultant at PwC. Experience, education, skills and certifications.">
+
+  <!-- Hero — dark -->
+  <section class="bg-slate-950 pt-32 pb-20">
+    <div class="mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-4 block">About</span>
+        <h1 class="text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight" style="font-family:'Space Grotesk',sans-serif">
+          Engineer by training.<br/>Operator by instinct.<br/><span class="text-indigo-400">Tech-obsessed by nature.</span>
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">
+          I'm Carlos, an industrial engineer from Madrid who found his sweet spot where <span class="text-white font-medium">operations, strategy, and technology</span> meet.
+        </p>
+      </div>
+      <div class="hidden lg:block">
+        <img src="/images/about-photo.jpg" alt="" class="w-full rounded-2xl object-cover max-h-72 opacity-80"
+             onerror="this.style.display='none'" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About text — white -->
+  <section class="bg-white py-20">
+    <div class="mx-auto max-w-3xl px-6 space-y-5 text-slate-600 text-[1.05rem] leading-relaxed aos">
+      <p>
+        Over the past 2+ years I have been working in large-scale digital transformation programmes in financial services, coordinating cross-functional teams across multiple European markets. I thrive at the intersection of people, processes, and technology — turning ambiguity into structure and complexity into clarity.
+      </p>
+      <p>
+        I also lead the AI adoption initiative for my department, identifying high-value use cases and building a culture of continuous learning around technology and artificial intelligence.
+      </p>
+      <p>
+        Now I'm looking for my next chapter: moving to the <strong class="text-slate-900">Netherlands</strong> to join a company where I can keep building at the intersection of operations, strategy, and AI.
+      </p>
+      <p>
+        Outside of work, you'll find me exploring new countries, playing chess, or experimenting with the latest AI tools. I also spent 7 years as a federated basketball referee — which taught me everything about decision-making under pressure.
+      </p>
+      <div class="flex flex-wrap gap-2 pt-4">
+        {["Operations & Strategy", "AI & Innovation", "Digital Transformation", "Agile / Scrum", "Financial Services"].map(t => (
+          <span class="text-sm text-indigo-600 bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1 font-medium">{t}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience — light gray -->
+  <section class="bg-slate-50 py-20" id="experience">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 aos">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-3 block">Experience</span>
+        <h2 class="text-3xl font-bold text-slate-900" style="font-family:'Space Grotesk',sans-serif">Where I've Made Impact</h2>
+        <p class="text-slate-500 mt-2">From digital transformation to AI adoption, building the bridge between business and technology.</p>
+      </div>
+
+      <!-- PwC -->
+      <div class="mb-14 aos">
+        <div class="flex items-center gap-5 pb-6 mb-6 border-b border-slate-200">
+          <img src="/images/pwc-logo.png" alt="PwC" class="w-16 h-16 rounded-xl object-contain bg-white border border-slate-200 p-2"
+               onerror="this.outerHTML='<div class=\'w-16 h-16 rounded-xl bg-white border border-slate-200 flex items-center justify-center font-bold text-indigo-600\'>PwC</div>'" />
+          <div>
+            <h3 class="font-bold text-slate-900 text-lg" style="font-family:'Space Grotesk',sans-serif">PwC | Management Consultant, Banking & Insurance</h3>
+            <p class="text-slate-500 text-sm">Madrid, Spain · Aug 2024 – Present</p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            {
+              date: "Aug 2024 – Present",
+              title: "Business Operations & Transformation",
+              sub: "Top 5 Global Insurer",
+              desc: "Contributing to a €200M+ international digital transformation programme across 4 European markets. Leading a 6-person strategy workstream, designing governance frameworks, automating executive reporting (reducing C-level decision cycles by 30%), and managing the Jira/Confluence operating model for 150+ members and 20,000+ user stories.",
+              tags: ["€200M+ Programme", "4 European Markets", "150+ Team Members", "30% Faster Decisions"],
+            },
+            {
+              date: "2024 – Present",
+              title: "Innovation & AI Lead",
+              sub: "Internal initiative, Banking & Insurance",
+              desc: "Leading AI adoption across the department, identifying 15+ high-value use cases in insurance operations and driving a 25% productivity improvement. Own the internal learning roadmap for 50+ employees, coordinating 30+ manager-led training sessions.",
+              tags: ["15+ AI Use Cases", "25% Productivity Gain", "50+ Employees", "L&D"],
+            },
+            {
+              date: "2025",
+              title: "Process Improvement Advisory",
+              sub: "Top 3 Spanish Bank",
+              desc: "Conducted an end-to-end diagnostic of 10+ core technology providers and designed a target operating model (roles, SLAs, KPIs), identifying a 20% cost reduction opportunity. Built a data-driven business case identifying €3M in potential savings with 25% ROI.",
+              tags: ["€3M Savings", "Target Operating Model", "20% Cost Reduction", "25% ROI"],
+            },
+          ].map(r => (
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 hover:border-indigo-300 hover:shadow-md transition-all relative overflow-hidden group">
+              <div class="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-indigo-500 to-indigo-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full"></div>
+              <div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">{r.date}</div>
+              <div class="font-bold text-slate-900 mb-1" style="font-family:'Space Grotesk',sans-serif">{r.title}</div>
+              <div class="text-xs text-slate-400 italic mb-3">{r.sub}</div>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4">{r.desc}</p>
+              <div class="flex flex-wrap gap-1.5">
+                {r.tags.map(t => <span class="text-xs bg-slate-100 text-slate-600 rounded px-2 py-0.5">{t}</span>)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Sygris -->
+      <div class="aos">
+        <div class="flex items-center gap-5 pb-6 mb-6 border-b border-slate-200">
+          <img src="/images/Sygris-logo.png" alt="Sygris" class="w-16 h-16 rounded-xl object-contain bg-white border border-slate-200 p-2"
+               onerror="this.outerHTML='<div class=\'w-16 h-16 rounded-xl bg-white border border-slate-200 flex items-center justify-center font-bold text-indigo-600 text-xs\'>Sygris</div>'" />
+          <div>
+            <h3 class="font-bold text-slate-900 text-lg" style="font-family:'Space Grotesk',sans-serif">Sygris | Process Optimisation Intern</h3>
+            <p class="text-slate-500 text-sm">Madrid, Spain · Sep 2023 – Jun 2024</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 max-w-2xl hover:border-indigo-300 hover:shadow-md transition-all group relative overflow-hidden">
+          <div class="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-indigo-500 to-indigo-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full"></div>
+          <div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Sep 2023 – Jun 2024</div>
+          <div class="font-bold text-slate-900 mb-1" style="font-family:'Space Grotesk',sans-serif">Process Optimisation Intern</div>
+          <div class="text-xs text-slate-400 italic mb-3">BSc Thesis Project — ESG & Sustainability Software</div>
+          <p class="text-slate-500 text-sm leading-relaxed mb-4">
+            Optimised cross-team delivery using Agile methodologies (Scrum/Kanban) across 5 teams, improving execution cadence by 20%. Designed a comprehensive process improvement roadmap adopted company-wide for product development workflows.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            {["Agile / Scrum", "ESG & Sustainability", "Process Design", "20% Faster Delivery"].map(t => (
+              <span class="text-xs bg-slate-100 text-slate-600 rounded px-2 py-0.5">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education — white -->
+  <section class="bg-white py-20" id="education">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 aos">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-3 block">Education</span>
+        <h2 class="text-3xl font-bold text-slate-900" style="font-family:'Space Grotesk',sans-serif">Where I Learned</h2>
+        <p class="text-slate-500 mt-2">An engineering foundation combined with business and digital transformation knowledge.</p>
+      </div>
+
+      <div class="mb-10 text-center aos">
+        <img src="/images/graduation.jpg" alt="Graduation at ICAI"
+             class="max-w-xs mx-auto rounded-2xl shadow-lg"
+             onerror="this.style.display='none'" />
+        <p class="text-sm text-slate-400 mt-3">Universidad Pontificia Comillas ICAI</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 aos">
+        {[
+          {
+            logo: "/images/comillas-logo.png", alt: "ICAI",
+            name: "Universidad Pontificia Comillas ICAI",
+            degree: "BSc Industrial Technologies Engineering · Electronics",
+            date: "Madrid · 2020–2024",
+          },
+          {
+            logo: "/images/powermba-logo.png", alt: "PMBA",
+            name: "The Power Business School",
+            degree: "Business Management + Digital Transformation Programme",
+            date: "2024–2025",
+          },
+          {
+            logo: "/images/mcneil-logo.png", alt: "MHS",
+            name: "McNeil High School",
+            degree: "Freshman Year Abroad",
+            date: "Austin, Texas · 2018",
+          },
+        ].map(e => (
+          <div class="flex gap-4 items-start bg-slate-50 rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-all">
+            <img src={e.logo} alt={e.alt}
+                 class="w-14 h-14 rounded-xl object-contain bg-white border border-slate-200 p-1.5 shrink-0"
+                 onerror={`this.outerHTML='<div class=\\'w-14 h-14 rounded-xl bg-white border border-slate-200 flex items-center justify-center font-bold text-indigo-600 text-xs shrink-0\\'>${e.alt}</div>'`} />
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm mb-1" style="font-family:'Space Grotesk',sans-serif">{e.name}</h3>
+              <p class="text-slate-500 text-xs mb-1">{e.degree}</p>
+              <p class="text-slate-400 text-xs">{e.date}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills — dark -->
+  <section class="bg-slate-950 py-20" id="skills">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 aos">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-3 block">Skills & Tools</span>
+        <h2 class="text-3xl font-bold text-white" style="font-family:'Space Grotesk',sans-serif">What I Bring to the Table</h2>
+        <p class="text-slate-400 mt-2">A blend of operational skills, tech capabilities, and a passion for continuous learning.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+        {[
+          {
+            icon: "📋", cls: "bg-indigo-500/10", title: "Project Management",
+            items: ["Stakeholder management (C-level)", "Cross-functional team coordination", "Agile / Scrum / Kanban", "Governance & reporting frameworks", "Jira & Confluence administration", "Backlog management (20,000+ stories)"],
+          },
+          {
+            icon: "🎯", cls: "bg-violet-500/10", title: "Strategy & Operations",
+            items: ["Digital transformation strategy", "Business case development", "Operating model design", "Process optimisation", "Data-driven decision making", "Executive communication"],
+          },
+          {
+            icon: "🤖", cls: "bg-amber-500/10", title: "AI & Innovation",
+            items: ["AI use case identification & adoption", "Prompt engineering & AI workflows", "Claude, Perplexity, Gemini, DALL-E", "AI agent development (Microsoft)", "AI-powered productivity tools"],
+          },
+          {
+            icon: "🔧", cls: "bg-emerald-500/10", title: "Tech & Tools",
+            items: ["SQL & Power BI", "Excel advanced (VBA, macros, models)", "Microsoft 365 Expert", "Atlassian (Jira, Confluence, Loom, Rovo)"],
+          },
+          {
+            icon: "🌐", cls: "bg-cyan-500/10", title: "Languages",
+            items: ["Spanish (Native)", "English (Fluent)", "Dutch — Beginner · 150+ Day Streak"],
+          },
+          {
+            icon: "🤝", cls: "bg-pink-500/10", title: "Soft Skills",
+            items: ["Leadership & team coordination", "Decision-making under pressure", "Adaptability & cultural awareness", "Problem-solving & critical thinking", "Communication & storytelling"],
+          },
+        ].map((s, i) => (
+          <div class="bg-slate-900 border border-white/5 rounded-2xl p-6 hover:border-indigo-500/30 hover:-translate-y-1 transition-all aos group" style={`transition-delay:${i*60}ms`}>
+            <div class={`w-11 h-11 rounded-xl flex items-center justify-center text-xl mb-5 ${s.cls} group-hover:scale-110 transition-transform`}>{s.icon}</div>
+            <h3 class="font-bold text-white mb-4" style="font-family:'Space Grotesk',sans-serif">{s.title}</h3>
+            <ul class="space-y-2">
+              {s.items.map(item => (
+                <li class="flex items-start gap-2 text-sm text-slate-400">
+                  <span class="w-1.5 h-1.5 bg-indigo-500 rounded-full mt-1.5 shrink-0"></span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <!-- Certifications -->
+      <div class="aos">
+        <h3 class="text-lg font-bold text-white mb-6 text-center" style="font-family:'Space Grotesk',sans-serif">Certifications</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {[
+            { logo: "/images/cert-ms-ai-leader.png",   cls: "bg-gradient-to-br from-blue-500 to-green-500",  title: "AI Transformation Leader",        org: "Microsoft Certified" },
+            { logo: "/images/cert-ms-ai-agent.png",    cls: "bg-gradient-to-br from-blue-500 to-green-500",  title: "Create an AI Agent",              org: "Microsoft Applied Skills" },
+            { logo: "/images/cert-scrum.png",           cls: "bg-gradient-to-br from-orange-500 to-yellow-400",title: "Scrum Master Certified (SMC)",    org: "Scrum Manager" },
+            { logo: "/images/cert-anthropic-fluency.png",cls:"bg-gradient-to-br from-amber-500 to-orange-400",title: "AI Fluency",                      org: "Anthropic Certified" },
+            { logo: "/images/cert-anthropic-cowork.png",cls:"bg-gradient-to-br from-amber-500 to-orange-400",title: "Cowork Certification",             org: "Anthropic Certified" },
+            { logo: "/images/cert-anthropic-101.png",   cls:"bg-gradient-to-br from-amber-500 to-orange-400",title: "Claude 101",                      org: "Anthropic Certified" },
+            { logo: "/images/cert-atlassian-loom.png",  cls:"bg-gradient-to-br from-blue-600 to-teal-500",   title: "Loom Fundamentals",               org: "Atlassian Credentialed" },
+            { logo: "/images/cert-atlassian-forge.png", cls:"bg-gradient-to-br from-blue-600 to-teal-500",   title: "Forge Fundamentals",              org: "Atlassian Credentialed" },
+            { logo: "/images/cert-atlassian-rovo.png",  cls:"bg-gradient-to-br from-blue-600 to-teal-500",   title: "Rovo Fundamentals",               org: "Atlassian Credentialed" },
+            { logo: "/images/cert-coursera-data.png",   cls:"bg-gradient-to-br from-blue-700 to-cyan-500",   title: "Data-driven Decision Making",     org: "Coursera" },
+            { logo: "/images/cert-coursera-excel.png",  cls:"bg-gradient-to-br from-blue-700 to-cyan-500",   title: "Problem Solving with Excel",      org: "Coursera" },
+            { logo: "/images/cert-coursera-ppt.png",    cls:"bg-gradient-to-br from-blue-700 to-cyan-500",   title: "Effective Business Presentations", org: "Coursera" },
+          ].map(c => (
+            <div class="flex items-center gap-3 bg-slate-900 border border-white/5 rounded-xl p-4 hover:border-indigo-500/30 transition-all">
+              <img src={c.logo} alt={c.title}
+                   class={`w-10 h-10 rounded-lg object-contain p-1 ${c.cls} shrink-0`}
+                   onerror={`this.className='w-10 h-10 rounded-lg ${c.cls} shrink-0'`} />
+              <div>
+                <div class="text-white text-sm font-medium">{c.title}</div>
+                <div class="text-slate-500 text-xs">{c.org}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beyond Work — white -->
+  <section class="bg-white py-20" id="beyond">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 aos">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-3 block">Beyond Work</span>
+        <h2 class="text-3xl font-bold text-slate-900" style="font-family:'Space Grotesk',sans-serif">More Than a CV</h2>
+        <p class="text-slate-500 mt-2">The things that shape how I think, lead, and approach life.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6">
+        <!-- Basketball - featured -->
+        <div class="lg:col-span-2 rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-all aos">
+          <div class="grid md:grid-cols-2">
+            <img src="/images/basketball.jpg" alt="Carlos Dorronsoro refereeing basketball"
+                 class="w-full h-72 md:h-full object-cover"
+                 onerror="this.style.background='linear-gradient(135deg,#3b82f6,#1e40af)'; this.removeAttribute('src')" />
+            <div class="p-8 flex flex-col justify-center">
+              <div class="text-3xl mb-4">🏀</div>
+              <h3 class="text-xl font-bold text-slate-900 mb-3" style="font-family:'Space Grotesk',sans-serif">Basketball Referee (FBM)</h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-3">
+                7+ seasons as a federated basketball referee with the Madrid Basketball Federation. Officiated over <strong class="text-slate-700">1,000 games</strong> across multiple levels, including selection for the <strong class="text-slate-700">Women's 1st Autonomic Final (2022–23)</strong> and the <strong class="text-slate-700">Men's 1st Autonomic 3rd/4th place match (2023–24)</strong>.
+              </p>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                This experience taught me more about <strong class="text-slate-700">decision-making under pressure, conflict resolution, and leadership</strong> than any textbook ever could.
+              </p>
+              <span class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 bg-indigo-50 border border-indigo-100 rounded-full px-4 py-1.5 w-fit">
+                🏆 Selected for Autonomic Finals
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chess -->
+        <div class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-md transition-all aos">
+          <img src="/images/chess.JPG" alt="Chess tournament at Comillas"
+               class="w-full h-48 object-cover"
+               onerror="this.style.background='linear-gradient(135deg,#f59e0b,#d97706)'; this.removeAttribute('src')" />
+          <div class="p-6">
+            <div class="text-2xl mb-3">♟️</div>
+            <h3 class="font-bold text-slate-900 text-lg mb-2" style="font-family:'Space Grotesk',sans-serif">Chess · Trofeo Rector</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-4">
+              2nd place in the <strong class="text-slate-700">Trofeo Rector</strong> chess tournament at Universidad Pontificia Comillas, competing in the Madrid Championship.
+            </p>
+            <a href="https://www.comillas.edu/noticias/el-campeonato-de-madrid-de-ajedrez-invade-el-gimnasio-de-comillas/" target="_blank" rel="noopener"
+               class="text-sm text-indigo-600 font-medium hover:text-indigo-800 transition-colors">
+              🔗 Read the article →
+            </a>
+          </div>
+        </div>
+
+        <!-- Travel -->
+        <div class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-md transition-all aos">
+          <img src="/images/world-map.jpg" alt="Countries visited"
+               class="w-full h-48 object-contain bg-blue-50 p-2"
+               onerror="this.outerHTML='<div class=\'w-full h-48 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-5xl\'>🌍🌎🌏</div>'" />
+          <div class="p-6">
+            <div class="text-2xl mb-3">✈️</div>
+            <h3 class="font-bold text-slate-900 text-lg mb-2" style="font-family:'Space Grotesk',sans-serif">30+ Countries · 5 Continents</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              From Austin, Texas (where I spent a high school year at McNeil High School) to every corner of the globe. Travel has shaped my cultural awareness, adaptability, and global perspective.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

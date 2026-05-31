@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    line-height: 1.2;
+  }
+}
+
+/* Prose styles for blog posts */
+@layer components {
+  .prose-blog h2 { @apply text-2xl font-bold text-slate-900 mt-10 mb-4; font-family: 'Space Grotesk', sans-serif; }
+  .prose-blog h3 { @apply text-xl font-semibold text-slate-900 mt-8 mb-3; font-family: 'Space Grotesk', sans-serif; }
+  .prose-blog p  { @apply text-slate-600 leading-relaxed mb-5 text-[1.05rem]; }
+  .prose-blog ul { @apply list-disc list-outside pl-5 mb-5 space-y-2 text-slate-600; }
+  .prose-blog li { @apply leading-relaxed; }
+  .prose-blog a  { @apply text-indigo-600 underline underline-offset-2 hover:text-indigo-800; }
+  .prose-blog strong { @apply font-semibold text-slate-900; }
+  .prose-blog blockquote { @apply border-l-4 border-indigo-400 pl-5 italic text-slate-500 my-6; }
+  .prose-blog hr { @apply border-slate-200 my-8; }
+}

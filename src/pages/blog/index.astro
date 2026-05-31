@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="Blog" description="Articles, thoughts and reflections by Carlos Dorronsoro Málaga.">
+
+  <section class="bg-slate-950 pt-32 pb-16">
+    <div class="mx-auto max-w-3xl px-6">
+      <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-4 block">Blog</span>
+      <h1 class="text-4xl font-extrabold text-white mb-4" style="font-family:'Space Grotesk',sans-serif">Lo que pienso.<br/>Lo que escribo.</h1>
+      <p class="text-slate-400 text-lg">Sin formato fijo. Sobre lo que me apetezca.</p>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="mx-auto max-w-3xl px-6">
+      {posts.length === 0 ? (
+        <p class="text-slate-400 text-center py-20">Coming soon.</p>
+      ) : (
+        <div class="space-y-10">
+          {posts.map(post => (
+            <article class="group border-b border-slate-100 pb-10 last:border-0">
+              <a href={`/blog/${post.id}`}>
+                <time class="text-xs text-slate-400 uppercase tracking-wider mb-3 block">
+                  {post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </time>
+                <h2 class="text-2xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-3 leading-snug" style="font-family:'Space Grotesk',sans-serif">
+                  {post.data.title}
+                </h2>
+                <p class="text-slate-500 leading-relaxed mb-4">{post.data.excerpt}</p>
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-2 flex-wrap">
+                    {post.data.tags.map(t => (
+                      <span class="text-xs text-indigo-500 bg-indigo-50 rounded-full px-2.5 py-0.5">{t}</span>
+                    ))}
+                  </div>
+                  <span class="text-sm text-indigo-600 font-medium group-hover:text-indigo-800 transition-colors">
+                    Read →
+                  </span>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+</Layout>

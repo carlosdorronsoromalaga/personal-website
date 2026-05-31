@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="WorldCup App — Built 100% with AI" description="A football prediction app built entirely with AI tools — from spec to deployed product.">
+  <div class="mx-auto max-w-3xl px-6 pt-32 pb-24">
+
+    <a href="/projects" class="text-sm text-slate-500 hover:text-white transition-colors mb-8 inline-block">← All projects</a>
+
+    <div class="mb-2">
+      <span class="text-xs font-medium text-blue-400 bg-blue-950/50 rounded px-2.5 py-1">Shipped</span>
+    </div>
+    <h1 class="text-4xl font-bold text-white mt-4 mb-2">WorldCup App</h1>
+    <p class="text-xl text-slate-400 mb-10">A football prediction app built entirely with AI.</p>
+
+    <div class="space-y-8">
+
+      <div class="rounded-xl border-l-4 border-blue-500 bg-slate-900/60 p-6">
+        <p class="text-slate-300 text-lg leading-relaxed font-medium">
+          "What does AI-first development actually look like end to end? I built this to find out."
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-white font-semibold text-xl mb-3">The experiment</h2>
+        <p class="text-slate-400 leading-relaxed">
+          This project was an intentional experiment: build a complete, working product from scratch using AI tools throughout — design, code, testing, deployment. No templates, no pre-built components borrowed from previous work. Start to shipped with AI as the primary tool.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-white font-semibold text-xl mb-3">What it is</h2>
+        <p class="text-slate-400 leading-relaxed">
+          A football prediction and tournament management app for the World Cup. Users submit predictions, track results, and compete on a leaderboard. Full-stack: React frontend, backend API, deployed and live.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-white font-semibold text-xl mb-3">What I learned</h2>
+        <ul class="space-y-2">
+          {[
+            "AI accelerates dramatically on boilerplate — the hard parts are still hard",
+            "Prompt quality matters more than model choice for complex logic",
+            "Debugging AI-generated code requires understanding it, not just running it",
+            "You ship faster, but you also ship bugs faster — testing discipline is non-negotiable",
+          ].map(item => (
+            <li class="flex gap-3 text-slate-400">
+              <span class="text-slate-600 mt-0.5 shrink-0">—</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-14 pt-8 border-t border-slate-800 flex flex-wrap gap-3">
+      {["Full-stack", "React", "AI-built", "Experiment", "Claude"].map(tag => (
+        <span class="text-xs text-blue-400 bg-blue-950/40 rounded px-2 py-0.5">{tag}</span>
+      ))}
+    </div>
+
+  </div>
+</Layout>

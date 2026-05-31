@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="EVA — Voice AI for Elderly Users" description="EVA is a voice-first AI companion designed for elderly users. The problem isn't ability — it's that technology isn't designed for them.">
+  <div class="mx-auto max-w-3xl px-6 pt-32 pb-24">
+
+    <a href="/projects" class="text-sm text-slate-500 hover:text-white transition-colors mb-8 inline-block">← All projects</a>
+
+    <div class="mb-2">
+      <span class="text-xs font-medium text-yellow-400 bg-yellow-950/50 rounded px-2.5 py-1">In validation</span>
+    </div>
+    <h1 class="text-4xl font-bold text-white mt-4 mb-2">EVA</h1>
+    <p class="text-xl text-slate-400 mb-10">Voice-first AI companion for elderly users.</p>
+
+    <div class="prose-custom space-y-8">
+
+      <div class="rounded-xl border-l-4 border-blue-500 bg-slate-900/60 p-6">
+        <p class="text-slate-300 text-lg leading-relaxed font-medium">
+          "The problem isn't their ability. The problem is that technology isn't designed for them."
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-white font-semibold text-xl mb-3">The problem</h2>
+        <p class="text-slate-400 leading-relaxed">
+          Elderly users are consistently underserved by tech. Smartphones are complex, apps require visual attention, voice assistants are built for younger, faster users. The capability is there — the design empathy isn't. I watched this first-hand.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-white font-semibold text-xl mb-3">What EVA does</h2>
+        <p class="text-slate-400 leading-relaxed mb-4">Simple model: press a button, speak. That's it.</p>
+        <ul class="space-y-3">
+          {[
+            "Reminders and calendar management via voice",
+            "Answers questions in plain, accessible language",
+            "Initiates and manages calls",
+            "No app, no screen navigation, no complexity",
+          ].map(item => (
+            <li class="flex gap-3 text-slate-400">
+              <span class="text-blue-400 mt-0.5 shrink-0">▸</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-white font-semibold text-xl mb-3">Design principles</h2>
+        <p class="text-slate-400 leading-relaxed">
+          Latency matters enormously — a 3-second pause destroys trust with elderly users. Simplicity isn't a feature, it's the whole product. One wrong answer can damage trust permanently. The technical challenge is minimal compared to the UX challenge.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-white font-semibold text-xl mb-3">Where we are</h2>
+        <p class="text-slate-400 leading-relaxed">
+          Concept design and system architecture complete. Currently in validation: testing whether elderly users will understand, desire, and trust the product before committing to full development. Real users first. Code later.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-white font-semibold text-xl mb-3">Key learnings</h2>
+        <ul class="space-y-2">
+          {[
+            "Voice latency is the #1 UX killer — sub-1s response is non-negotiable",
+            "Fewer features = more trust. Every added option is a potential point of failure",
+            "Trust is fragile. One confusing response can end the relationship",
+            "The real product is confidence, not functionality",
+          ].map(item => (
+            <li class="flex gap-3 text-slate-400">
+              <span class="text-slate-600 mt-0.5 shrink-0">—</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-14 pt-8 border-t border-slate-800 flex flex-wrap gap-3">
+      {["Voice AI", "Healthcare", "Python", "LLM", "UX Research"].map(tag => (
+        <span class="text-xs text-blue-400 bg-blue-950/40 rounded px-2 py-0.5">{tag}</span>
+      ))}
+    </div>
+
+  </div>
+</Layout>

@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 2);
+---
+
+<Layout title="Home">
+
+  <!-- HERO — dark, impactful -->
+  <section class="relative min-h-screen bg-slate-950 flex items-center overflow-hidden pt-20">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-800/8 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="mx-auto max-w-6xl px-6 py-20 grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Text -->
+      <div>
+        <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-2 mb-8">
+          <span class="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></span>
+          <span class="text-indigo-300 text-xs font-semibold tracking-widest uppercase">Open to opportunities · Netherlands</span>
+        </div>
+
+        <h1 class="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6" style="font-family:'Space Grotesk',sans-serif">
+          Carlos<br/><span class="text-indigo-400">Dorronsoro</span><br/>Málaga
+        </h1>
+
+        <p class="text-slate-400 text-lg leading-relaxed max-w-lg mb-10">
+          Operations and strategy professional with an engineering foundation.
+          Passionate about AI, digital transformation, and building things that matter.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="/about" class="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-indigo-500 transition-all hover:-translate-y-0.5 shadow-lg shadow-indigo-600/20">
+            See my work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/contact" class="inline-flex items-center gap-2 border border-white/20 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:border-indigo-400 hover:text-indigo-300 transition-all">
+            Get in touch
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="flex gap-10 mt-14 pt-10 border-t border-white/10">
+          {[
+            { n: "2+", l: "Years in Operations" },
+            { n: "30+", l: "Countries Visited" },
+            { n: "1,000+", l: "Games Refereed" },
+          ].map(s => (
+            <div>
+              <div class="text-2xl font-bold text-white" style="font-family:'Space Grotesk',sans-serif">{s.n}</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider mt-0.5">{s.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="hidden lg:flex justify-center items-center">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/30 to-transparent rounded-3xl scale-105 blur-xl"></div>
+          <img
+            src="/images/headshot.jpg"
+            alt="Carlos Dorronsoro Málaga"
+            class="relative w-80 h-80 object-cover object-top rounded-3xl border-2 border-indigo-500/20 shadow-2xl"
+            onerror="this.parentElement.innerHTML='<div class=\'relative w-80 h-80 rounded-3xl bg-slate-800 border-2 border-indigo-500/20 flex items-center justify-center\'><span style=\'font-family:Space Grotesk; font-size:5rem; font-weight:800; color:#4f46e5\'>CD</span></div>'"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SNIPPET — light -->
+  <section class="bg-white py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="aos">
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-4 block">About</span>
+          <h2 class="text-3xl font-bold text-slate-900 mb-6" style="font-family:'Space Grotesk',sans-serif">
+            Engineer by training.<br/>Operator by instinct.<br/>Tech-obsessed by nature.
+          </h2>
+          <p class="text-slate-500 leading-relaxed mb-4">
+            I'm Carlos — an industrial engineer from Madrid who found his sweet spot where <strong class="text-slate-700">operations, strategy, and technology</strong> meet. Over 2+ years at PwC I've led large-scale digital transformation programmes in financial services across multiple European markets.
+          </p>
+          <p class="text-slate-500 leading-relaxed mb-6">
+            I also lead the AI adoption initiative for my department — identifying high-value use cases and building a culture of continuous learning around AI. On the side, I build AI products that solve real problems.
+          </p>
+          <a href="/about" class="inline-flex items-center gap-2 text-indigo-600 font-semibold text-sm hover:text-indigo-800 transition-colors">
+            Full profile & experience
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 aos">
+          {[
+            { v: "€200M+", l: "Transformation led", icon: "◈" },
+            { v: "4", l: "European markets", icon: "◉" },
+            { v: "€3M", l: "Savings identified", icon: "◎" },
+            { v: "15+", l: "AI use cases deployed", icon: "◆" },
+          ].map(s => (
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-indigo-200 hover:shadow-md transition-all">
+              <div class="text-indigo-500 text-xl mb-3">{s.icon}</div>
+              <div class="text-2xl font-bold text-slate-900 mb-1" style="font-family:'Space Grotesk',sans-serif">{s.v}</div>
+              <div class="text-xs text-slate-400 uppercase tracking-wider">{s.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS — light gray bg -->
+  <section class="bg-slate-50 py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="flex items-end justify-between mb-12 aos">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-3 block">Projects</span>
+          <h2 class="text-3xl font-bold text-slate-900" style="font-family:'Space Grotesk',sans-serif">Things I've built.</h2>
+        </div>
+        <a href="/projects" class="text-sm text-slate-500 hover:text-indigo-600 transition-colors hidden sm:block">All projects →</a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            slug: "eva", name: "EVA",
+            tagline: "Voice-first AI companion for elderly users",
+            tags: ["Voice AI", "Healthcare"], status: "In validation",
+            statusClass: "text-amber-600 bg-amber-50 border border-amber-200",
+          },
+          {
+            slug: "edupath", name: "EduPath",
+            tagline: "AI-driven personalised learning platform",
+            tags: ["EdTech", "LLM"], status: "Live",
+            statusClass: "text-emerald-600 bg-emerald-50 border border-emerald-200",
+          },
+          {
+            slug: "worldcup-app", name: "WorldCup App",
+            tagline: "A football app built entirely with AI",
+            tags: ["Full-stack", "Experiment"], status: "Shipped",
+            statusClass: "text-indigo-600 bg-indigo-50 border border-indigo-200",
+          },
+        ].map((p, i) => (
+          <a href={`/projects/${p.slug}`} class={`group bg-white rounded-2xl p-6 border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all aos`} style={`transition-delay:${i * 80}ms`}>
+            <div class="flex items-start justify-between mb-4">
+              <h3 class="font-bold text-slate-900 text-lg group-hover:text-indigo-600 transition-colors" style="font-family:'Space Grotesk',sans-serif">{p.name}</h3>
+              <span class={`text-xs font-medium px-2.5 py-1 rounded-full ${p.statusClass}`}>{p.status}</span>
+            </div>
+            <p class="text-slate-500 text-sm leading-relaxed mb-4">{p.tagline}</p>
+            <div class="flex gap-2 flex-wrap">
+              {p.tags.map(t => <span class="text-xs text-indigo-600 bg-indigo-50 rounded-full px-2.5 py-0.5">{t}</span>)}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW — white -->
+  <section class="bg-white py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="flex items-end justify-between mb-12 aos">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-3 block">Blog</span>
+          <h2 class="text-3xl font-bold text-slate-900" style="font-family:'Space Grotesk',sans-serif">Lo que pienso. Lo que escribo.</h2>
+        </div>
+        <a href="/blog" class="text-sm text-slate-500 hover:text-indigo-600 transition-colors hidden sm:block">All posts →</a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        {posts.map((post, i) => (
+          <a href={`/blog/${post.id}`} class="group bg-slate-50 rounded-2xl p-7 border border-slate-100 hover:border-indigo-200 hover:shadow-md transition-all aos" style={`transition-delay:${i * 80}ms`}>
+            <time class="text-xs text-slate-400 uppercase tracking-wider mb-3 block">
+              {post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </time>
+            <h3 class="font-bold text-slate-900 text-lg mb-2 group-hover:text-indigo-600 transition-colors leading-snug" style="font-family:'Space Grotesk',sans-serif">{post.data.title}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-4">{post.data.excerpt}</p>
+            <div class="flex gap-2 flex-wrap">
+              {post.data.tags.map(t => <span class="text-xs text-indigo-500 bg-indigo-50 rounded-full px-2.5 py-0.5">{t}</span>)}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA — dark -->
+  <section class="bg-slate-950 py-24">
+    <div class="mx-auto max-w-6xl px-6 text-center aos">
+      <h2 class="text-3xl font-bold text-white mb-4" style="font-family:'Space Grotesk',sans-serif">¿Hablamos?</h2>
+      <p class="text-slate-400 max-w-lg mx-auto mb-8">
+        Estoy explorando oportunidades en consultoría de IA, adopción y producto en los Países Bajos. Si tienes algo interesante, escríbeme.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-3.5 rounded-xl font-semibold hover:bg-indigo-500 transition-all hover:-translate-y-0.5 shadow-lg shadow-indigo-600/30">
+        Get in touch
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+  </section>
+
+</Layout>
