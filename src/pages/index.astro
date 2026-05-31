@@ -30,9 +30,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
         <p class="text-slate-300 text-lg leading-relaxed max-w-lg mb-10">
           Industrial engineer turned AI consultant. I help large organisations put
-          AI to work, and spend my own time building products from scratch — because
-          I don't think you can advise on what you've never built. At the centre of
-          all of it: people.
+          AI to work, and I spend my own time building products from scratch,
+          because I don't think you can advise on what you've never built. At the
+          centre of all of it: people.
         </p>
 
         <div class="flex flex-wrap gap-4">
@@ -75,7 +75,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <div class="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 hover:border-indigo-300 hover:shadow-lg transition-all">
           <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-4 block">Consulting</span>
           <h3 class="text-lg font-bold text-slate-900 mb-3" style="font-family:'Space Grotesk',sans-serif">Enterprise AI Consultant</h3>
-          <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">At PwC I lead AI adoption programmes for large financial services clients — from identifying the right use cases to running the change management that makes it real. Strategy through to execution, across multiple European markets.</p>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">At PwC I lead AI adoption programmes for large financial services clients, from identifying the right use cases to running the change management that makes it real. Strategy through to execution, across multiple European markets.</p>
           <a href="/about#experience"
              class="inline-flex items-center justify-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-indigo-500 transition-all hover:-translate-y-0.5">
             My experience
@@ -87,7 +87,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <div class="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 hover:border-indigo-300 hover:shadow-lg transition-all">
           <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-4 block">Building</span>
           <h3 class="text-lg font-bold text-slate-900 mb-3" style="font-family:'Space Grotesk',sans-serif">AI Product Builder</h3>
-          <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">On my own time I build AI products from scratch. EVA, EduPath, WorldCup App — personal projects born from real problems I couldn't let go. I believe the best advisors on AI are those who have actually built with it.</p>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">On my own time I build AI products from scratch. EVA, EduPath, WorldCup App: personal projects born from real problems I couldn't let go. I believe the best advisors on AI are those who have actually built with it.</p>
           <a href="/projects"
              class="inline-flex items-center justify-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-indigo-500 transition-all hover:-translate-y-0.5">
             My projects
@@ -110,7 +110,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </section>
 
-  <!-- PROJECTS — same card style, no emojis -->
+  <!-- PROJECTS -->
   <section class="bg-slate-50 py-24">
     <div class="mx-auto max-w-6xl px-6">
       <div class="mb-14">
@@ -126,9 +126,10 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             slug: "eva",
             name: "EVA",
             tagline: "Voice-first AI companion for elderly users",
-            body: "The problem isn't ability — it's that technology isn't designed for them. EVA strips everything back to a single button and a voice.",
+            body: "The problem isn't ability; it's that technology isn't designed for them. EVA strips everything back to a single button and a voice.",
             tags: ["Voice AI", "Healthcare", "Python"],
-            status: "In validation",
+            status: "Building",
+            statusClass: "text-amber-700 bg-amber-50 border-amber-200",
           },
           {
             slug: "edupath",
@@ -137,21 +138,23 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             body: "Learning should adapt to you, not the other way around. EduPath uses LLMs to generate curricula that evolve with the learner.",
             tags: ["EdTech", "LLM", "Product"],
             status: "Live",
+            statusClass: "text-emerald-700 bg-emerald-50 border-emerald-200",
           },
           {
             slug: "worldcup-app",
             name: "WorldCup App",
             tagline: "A full football prediction app, built entirely with AI",
-            body: "An experiment in AI-first development: from spec to deployed product using AI tools throughout — design, code, testing, and launch.",
+            body: "An experiment in AI-first development: from spec to deployed product using AI tools throughout, from design and code to testing and launch.",
             tags: ["Full-stack", "React", "Experiment"],
             status: "Shipped",
+            statusClass: "text-indigo-700 bg-indigo-50 border-indigo-200",
           },
         ].map(p => (
           <div class="group flex flex-col rounded-2xl border border-slate-200 bg-white overflow-hidden hover:border-indigo-300 hover:shadow-lg transition-all">
             <div class="p-7 flex flex-col flex-1">
               <div class="flex items-start justify-between mb-4">
                 <h3 class="text-xl font-bold text-slate-900" style="font-family:'Space Grotesk',sans-serif">{p.name}</h3>
-                <span class="text-xs font-semibold px-2.5 py-1 rounded-full border border-slate-200 bg-slate-50 text-slate-600 shrink-0 ml-3">{p.status}</span>
+                <span class={`text-xs font-semibold px-2.5 py-1 rounded-full border shrink-0 ml-3 ${p.statusClass}`}>{p.status}</span>
               </div>
               <p class="text-sm font-medium text-slate-700 mb-2">{p.tagline}</p>
               <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-5">{p.body}</p>
@@ -179,12 +182,12 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
           Always thinking. Sometimes writing.
         </h2>
         <p class="text-slate-500 mt-3 text-lg max-w-2xl">
-          No schedule, no format. Just things I find worth sharing — about AI, building, consulting, or whatever's on my mind.
+          No schedule, no format. Just things I find worth sharing: about AI, building, consulting, or whatever's on my mind.
         </p>
       </div>
 
       {posts.length === 0 ? (
-        <p class="text-slate-400 text-sm">No posts yet — coming soon.</p>
+        <p class="text-slate-400 text-sm">No posts yet. Coming soon.</p>
       ) : (
         <div class="grid sm:grid-cols-2 gap-6">
           {posts.map(post => (
@@ -224,7 +227,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         Let's talk.
       </h2>
       <p class="text-slate-400 leading-relaxed mb-10">
-        I'm always up for a good conversation — about AI, building things, or where it's all heading. If something here resonated, reach out.
+        I'm always up for a good conversation about AI, building things, or where it's all heading. I'm also always open to new opportunities, so if something here resonated, reach out.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="mailto:carlos.dorronsoro.malaga@gmail.com"

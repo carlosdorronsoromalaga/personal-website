@@ -1,16 +1,16 @@
 ---
-title: "Primer post: por qué y para qué este blog"
+title: "¡Bienvenidos! Este es mi primer post"
 date: 2026-05-31
-excerpt: "Un espacio propio donde escribir sin filtros sobre lo que pienso, construyo, aprendo o simplemente me apetece compartir."
+excerpt: "Abro este blog con muchísima ilusión: un espacio para compartir quién soy, en qué ando y por qué creo que de las buenas conversaciones siempre sale algo."
 tags: ["meta", "personal"]
 ---
 
-Este es mi espacio. Sin formato fijo, sin agenda editorial, sin métricas de engagement.
+Bienvenidos. Este es el primer post de mi blog, y la verdad es que lo escribo con mucha ilusión.
 
-Lo que encontrarás aquí es lo que me parezca interesante en cada momento — puede ser una reflexión sobre IA, un experimento que salió mal, algo que leí y no pude dejar de pensar, o simplemente una idea que necesitaba salir de mi cabeza y tomar forma escrita.
+Llevaba tiempo queriendo tener un espacio propio. No una red social más, ni un escaparate, sino un sitio donde poder compartir cómo pienso, en qué trabajo y qué cosas me obsesionan lo suficiente como para ponerme a construirlas. Si has llegado hasta aquí, lo que quiero es justo eso: que me conozcas un poco mejor.
 
-Trabajo en transformación digital y consultoría de IA. Eso significa que paso mucho tiempo pensando sobre cómo la tecnología cambia (o no cambia) la forma en que las organizaciones funcionan. Algunas de esas reflexiones aterrizarán aquí.
+Me dedico a la consultoría de IA y a la transformación digital, y en mi tiempo libre construyo productos desde cero. Entre una cosa y otra, no paro de aprender, de equivocarme y de darle vueltas a cómo la tecnología cambia (o no) la forma en que trabajamos y vivimos. Parte de todo eso irá aterrizando aquí, sin agenda ni formato fijo. Lo que me parezca que merece la pena contar.
 
-También construyo cosas — EVA, EduPath, proyectos que empiezan con un problema real que me molesta lo suficiente como para intentar resolverlo. El proceso de construir genera muchos aprendizajes que normalmente se pierden. Este blog es en parte un intento de capturarlos.
+Pero, sobre todo, quiero que esto sea una invitación. Si algo de lo que lees te resuena, o simplemente te apetece charlar, escríbeme. Estoy siempre abierto a nuevas conversaciones, ideas y oportunidades. Creo de verdad que de una buena conversación casi siempre sale algo: un proyecto, una idea, un punto de vista que no se te había ocurrido, o sencillamente una buena compañía.
 
-Sin más. A ver a dónde lleva esto.
+Así que gracias por pasarte. A ver a dónde nos lleva esto.
