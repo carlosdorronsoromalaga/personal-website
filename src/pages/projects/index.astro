@@ -3,73 +3,120 @@ import Layout from '../../layouts/Layout.astro';
 
 const projects = [
   {
-    slug: "eva", name: "EVA",
+    slug: "eva",
+    name: "EVA",
     tagline: "Voice-first AI companion for elderly users",
-    description: "The problem isn't ability — it's that technology isn't designed for them. EVA is built around voice: press a button, speak. No apps, no screens, no complexity.",
+    description: "The problem isn't ability — it's that technology isn't designed for them. EVA is built around voice: press a button, speak. No apps, no screens, no complexity. Designed with and for people who deserve better tech.",
     tags: ["Voice AI", "Healthcare", "Python", "LLM"],
     status: "In validation",
-    statusClass: "text-amber-600 bg-amber-50 border border-amber-200",
+    statusColor: "amber",
     highlight: "Core insight: elderly users have the ability — the tech lacks the empathy.",
-    emoji: "🎙️",
+    accentColor: "#f59e0b",
+    number: "01",
   },
   {
-    slug: "edupath", name: "EduPath",
+    slug: "edupath",
+    name: "EduPath",
     tagline: "AI-driven personalised learning platform",
-    description: "Learning that adapts to you. EduPath uses LLMs to generate personalised curricula, track progress, and surface the right content at the right moment.",
+    description: "Learning that adapts to you. EduPath uses LLMs to generate personalised curricula, track progress, and surface the right content at the right moment. Validated with real learners. Expanding.",
     tags: ["EdTech", "LLM", "Product", "React"],
     status: "Live",
-    statusClass: "text-emerald-600 bg-emerald-50 border border-emerald-200",
+    statusColor: "emerald",
     highlight: "Validated with real learners. Expanding.",
-    emoji: "📚",
+    accentColor: "#10b981",
+    number: "02",
   },
   {
-    slug: "worldcup-app", name: "WorldCup App",
+    slug: "worldcup-app",
+    name: "WorldCup App",
     tagline: "A football prediction app built entirely with AI",
-    description: "From spec to deployed product using AI tools throughout — design, code, testing, deployment. An experiment in what AI-first development actually looks like end to end.",
+    description: "From spec to deployed product using AI tools throughout — design, code, testing, deployment. An experiment in what AI-first development actually looks like end to end. 100% AI-assisted.",
     tags: ["Full-stack", "AI-built", "React", "Experiment"],
     status: "Shipped",
-    statusClass: "text-indigo-600 bg-indigo-50 border border-indigo-200",
+    statusColor: "indigo",
     highlight: "100% AI-assisted from zero to deployed.",
-    emoji: "⚽",
+    accentColor: "#6366f1",
+    number: "03",
   },
 ];
+
+const statusClasses: Record<string, string> = {
+  amber: "text-amber-700 bg-amber-50 border border-amber-200",
+  emerald: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+  indigo: "text-indigo-700 bg-indigo-50 border border-indigo-200",
+};
 ---
 
 <Layout title="Projects" description="AI projects built by Carlos Dorronsoro Málaga — EVA, EduPath, WorldCup App.">
 
   <section class="bg-slate-950 pt-32 pb-16">
-    <div class="mx-auto max-w-6xl px-6">
+    <div class="mx-auto max-w-5xl px-6">
       <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-4 block">Projects</span>
       <h1 class="text-4xl font-extrabold text-white mb-4" style="font-family:'Space Grotesk',sans-serif">Things I've built.</h1>
       <p class="text-slate-400 text-lg max-w-2xl">
-        I build to learn and to solve real problems. Each project started with a genuine problem — not a portfolio exercise.
+        Every project started with a genuine problem. Not portfolio exercises — real attempts to build something useful.
       </p>
     </div>
   </section>
 
   <section class="bg-white py-16">
-    <div class="mx-auto max-w-6xl px-6 space-y-6">
-      {projects.map((p, i) => (
-        <a href={`/projects/${p.slug}`}
-           class="group flex flex-col sm:flex-row gap-6 bg-slate-50 rounded-2xl border border-slate-200 p-7 hover:border-indigo-300 hover:shadow-lg transition-all aos"
-           style={`transition-delay:${i * 80}ms`}>
-          <div class="text-4xl w-16 h-16 bg-white rounded-2xl border border-slate-200 flex items-center justify-center shrink-0 group-hover:border-indigo-200 transition-colors">{p.emoji}</div>
-          <div class="flex-1">
-            <div class="flex flex-wrap items-start justify-between gap-3 mb-2">
-              <h2 class="font-bold text-slate-900 text-xl group-hover:text-indigo-600 transition-colors" style="font-family:'Space Grotesk',sans-serif">{p.name}</h2>
-              <span class={`text-xs font-medium px-2.5 py-1 rounded-full ${p.statusClass}`}>{p.status}</span>
-            </div>
-            <p class="text-slate-500 text-sm mb-1">{p.tagline}</p>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">{p.description}</p>
-            <div class="flex flex-wrap items-center gap-3">
-              <div class="flex gap-2 flex-wrap">
-                {p.tags.map(t => <span class="text-xs text-indigo-500 bg-indigo-50 rounded-full px-2.5 py-0.5">{t}</span>)}
+    <div class="mx-auto max-w-5xl px-6">
+      <div class="space-y-8">
+        {projects.map((p) => (
+          <a
+            href={`/projects/${p.slug}`}
+            class="group block bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-slate-300 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="flex flex-col md:flex-row">
+              <!-- Left accent bar + number -->
+              <div
+                class="md:w-24 flex md:flex-col items-center justify-center gap-2 px-6 py-5 md:py-8 shrink-0"
+                style={`background-color:${p.accentColor}15; border-right: 3px solid ${p.accentColor}30`}
+              >
+                <span
+                  class="font-mono text-2xl font-bold"
+                  style={`color:${p.accentColor}`}
+                >{p.number}</span>
               </div>
-              <span class="text-xs text-slate-400 italic hidden sm:block">"{p.highlight}"</span>
+
+              <!-- Main content -->
+              <div class="flex-1 p-7">
+                <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+                  <div>
+                    <h2 class="text-2xl font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors" style="font-family:'Space Grotesk',sans-serif">
+                      {p.name}
+                    </h2>
+                    <p class="text-slate-500 text-sm mt-0.5">{p.tagline}</p>
+                  </div>
+                  <span class={`text-xs font-semibold px-3 py-1 rounded-full shrink-0 mt-1 ${statusClasses[p.statusColor]}`}>
+                    {p.status}
+                  </span>
+                </div>
+
+                <p class="text-slate-600 leading-relaxed mb-5">{p.description}</p>
+
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                  <div class="flex gap-2 flex-wrap">
+                    {p.tags.map(t => (
+                      <span class="text-xs text-slate-600 bg-slate-100 rounded-full px-2.5 py-0.5 font-medium">{t}</span>
+                    ))}
+                  </div>
+                  <span class="text-sm font-semibold text-indigo-600 group-hover:text-indigo-800 transition-colors shrink-0">
+                    View project →
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
-        </a>
-      ))}
+          </a>
+        ))}
+      </div>
+
+      <!-- Bottom note -->
+      <div class="mt-12 p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center">
+        <p class="text-slate-500 text-sm">
+          More experiments in progress. The best ideas are still half-formed.
+        </p>
+      </div>
     </div>
   </section>
 
