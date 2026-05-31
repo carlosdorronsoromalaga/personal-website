@@ -9,8 +9,8 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
 <Layout title="Home">
 
-  <!-- HERO — top-aligned, fills screen -->
-  <section class="relative min-h-svh bg-slate-950 overflow-hidden" style="padding-top:96px; padding-bottom:80px;">
+  <!-- HERO -->
+  <section class="relative bg-slate-950 overflow-hidden" style="padding-top:140px; padding-bottom:120px;">
     <div class="absolute inset-0 -z-10 pointer-events-none">
       <div class="absolute top-0 right-0 w-[700px] h-[700px] bg-indigo-600/8 rounded-full blur-3xl"></div>
       <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-900/8 rounded-full blur-3xl"></div>
@@ -29,9 +29,10 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         </h1>
 
         <p class="text-slate-300 text-lg leading-relaxed max-w-lg mb-10">
-          I help large organisations adopt AI in ways that actually change how they work.
-          Two years at PwC leading enterprise transformation across Europe,
-          and building AI products from scratch on my own time ever since.
+          Industrial engineer turned AI consultant. I help large organisations put
+          AI to work, and spend my own time building products from scratch — because
+          I don't think you can advise on what you've never built. At the centre of
+          all of it: people.
         </p>
 
         <div class="flex flex-wrap gap-4">
@@ -71,62 +72,39 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
       <div class="grid md:grid-cols-3 gap-6">
         <!-- Card 1: Enterprise AI Consultant -->
-        <div class="flex flex-col rounded-2xl border border-indigo-100 overflow-hidden hover:border-indigo-300 hover:shadow-lg transition-all group">
-          <div class="h-44 overflow-hidden bg-slate-100">
-            <img src="/images/about-photo.jpg" alt=""
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 onerror="this.parentElement.style.background='linear-gradient(135deg,#e0e7ff,#c7d2fe)'" />
-          </div>
-          <div class="flex flex-col flex-1 p-7">
-            <h3 class="text-lg font-bold text-slate-900 mb-3" style="font-family:'Space Grotesk',sans-serif">Enterprise AI Consultant</h3>
-            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">At PwC I lead AI adoption programmes for large financial services clients — from identifying the right use cases to running the change management that makes it real. Strategy through to execution, across multiple European markets.</p>
-            <a href="/about#experience"
-               class="inline-flex items-center justify-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-indigo-500 transition-all hover:-translate-y-0.5">
-              My experience
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
+        <div class="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 hover:border-indigo-300 hover:shadow-lg transition-all">
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-4 block">Consulting</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-3" style="font-family:'Space Grotesk',sans-serif">Enterprise AI Consultant</h3>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">At PwC I lead AI adoption programmes for large financial services clients — from identifying the right use cases to running the change management that makes it real. Strategy through to execution, across multiple European markets.</p>
+          <a href="/about#experience"
+             class="inline-flex items-center justify-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-indigo-500 transition-all hover:-translate-y-0.5">
+            My experience
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
 
         <!-- Card 2: AI Product Builder -->
-        <div class="flex flex-col rounded-2xl border border-violet-100 overflow-hidden hover:border-violet-300 hover:shadow-lg transition-all group">
-          <div class="h-44 overflow-hidden bg-gradient-to-br from-violet-50 to-indigo-100 flex items-center justify-center">
-            <div class="text-center px-6">
-              <div class="flex justify-center gap-3 mb-3">
-                <span class="text-xs font-bold text-violet-500 bg-white border border-violet-200 rounded-full px-3 py-1">EVA</span>
-                <span class="text-xs font-bold text-indigo-500 bg-white border border-indigo-200 rounded-full px-3 py-1">EduPath</span>
-                <span class="text-xs font-bold text-slate-500 bg-white border border-slate-200 rounded-full px-3 py-1">WorldCup</span>
-              </div>
-              <p class="text-xs text-slate-400 italic">Personal projects. Real problems.</p>
-            </div>
-          </div>
-          <div class="flex flex-col flex-1 p-7">
-            <h3 class="text-lg font-bold text-slate-900 mb-3" style="font-family:'Space Grotesk',sans-serif">AI Product Builder</h3>
-            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">On my own time I build AI products from scratch. EVA, EduPath, WorldCup App — personal projects born from real problems I couldn't let go. I believe the best advisors on AI are those who have actually built with it.</p>
-            <a href="/projects"
-               class="inline-flex items-center justify-center gap-2 bg-violet-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-violet-500 transition-all hover:-translate-y-0.5">
-              My projects
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
+        <div class="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 hover:border-indigo-300 hover:shadow-lg transition-all">
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-4 block">Building</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-3" style="font-family:'Space Grotesk',sans-serif">AI Product Builder</h3>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">On my own time I build AI products from scratch. EVA, EduPath, WorldCup App — personal projects born from real problems I couldn't let go. I believe the best advisors on AI are those who have actually built with it.</p>
+          <a href="/projects"
+             class="inline-flex items-center justify-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-indigo-500 transition-all hover:-translate-y-0.5">
+            My projects
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
 
         <!-- Card 3: Curious by nature -->
-        <div class="flex flex-col rounded-2xl border border-slate-200 overflow-hidden hover:border-slate-300 hover:shadow-lg transition-all group">
-          <div class="h-44 overflow-hidden bg-slate-100">
-            <img src="/images/basketball.jpg" alt="Basketball referee"
-                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                 onerror="this.parentElement.style.background='linear-gradient(135deg,#f1f5f9,#e2e8f0)'" />
-          </div>
-          <div class="flex flex-col flex-1 p-7">
-            <h3 class="text-lg font-bold text-slate-900 mb-3" style="font-family:'Space Grotesk',sans-serif">Curious by nature</h3>
-            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">30+ countries visited. Seven years as a federated basketball referee. Chess competitor. I approach every new context with the same mindset: understand the system, then find where to make an impact.</p>
-            <a href="/about#beyond"
-               class="inline-flex items-center justify-center gap-2 bg-slate-800 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-700 transition-all hover:-translate-y-0.5">
-              Beyond work
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
+        <div class="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 hover:border-indigo-300 hover:shadow-lg transition-all">
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-4 block">Beyond work</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-3" style="font-family:'Space Grotesk',sans-serif">Curious by nature</h3>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">30+ countries visited. Seven years as a federated basketball referee. Chess competitor. I approach every new context with the same mindset: understand the system, then find where to make an impact.</p>
+          <a href="/about#beyond"
+             class="inline-flex items-center justify-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-indigo-500 transition-all hover:-translate-y-0.5">
+            Beyond work
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -151,9 +129,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             body: "The problem isn't ability — it's that technology isn't designed for them. EVA strips everything back to a single button and a voice.",
             tags: ["Voice AI", "Healthcare", "Python"],
             status: "In validation",
-            statusClass: "text-amber-700 bg-amber-50 border-amber-200",
-            cardBorder: "border-amber-100 hover:border-amber-300",
-            btnClass: "bg-amber-500 hover:bg-amber-400",
           },
           {
             slug: "edupath",
@@ -162,9 +137,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             body: "Learning should adapt to you, not the other way around. EduPath uses LLMs to generate curricula that evolve with the learner.",
             tags: ["EdTech", "LLM", "Product"],
             status: "Live",
-            statusClass: "text-emerald-700 bg-emerald-50 border-emerald-200",
-            cardBorder: "border-emerald-100 hover:border-emerald-300",
-            btnClass: "bg-emerald-600 hover:bg-emerald-500",
           },
           {
             slug: "worldcup-app",
@@ -173,16 +145,13 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             body: "An experiment in AI-first development: from spec to deployed product using AI tools throughout — design, code, testing, and launch.",
             tags: ["Full-stack", "React", "Experiment"],
             status: "Shipped",
-            statusClass: "text-indigo-700 bg-indigo-50 border-indigo-200",
-            cardBorder: "border-indigo-100 hover:border-indigo-300",
-            btnClass: "bg-indigo-600 hover:bg-indigo-500",
           },
         ].map(p => (
-          <div class={`group flex flex-col rounded-2xl border bg-white overflow-hidden hover:shadow-lg transition-all ${p.cardBorder}`}>
+          <div class="group flex flex-col rounded-2xl border border-slate-200 bg-white overflow-hidden hover:border-indigo-300 hover:shadow-lg transition-all">
             <div class="p-7 flex flex-col flex-1">
               <div class="flex items-start justify-between mb-4">
                 <h3 class="text-xl font-bold text-slate-900" style="font-family:'Space Grotesk',sans-serif">{p.name}</h3>
-                <span class={`text-xs font-semibold px-2.5 py-1 rounded-full border shrink-0 ml-3 ${p.statusClass}`}>{p.status}</span>
+                <span class="text-xs font-semibold px-2.5 py-1 rounded-full border border-slate-200 bg-slate-50 text-slate-600 shrink-0 ml-3">{p.status}</span>
               </div>
               <p class="text-sm font-medium text-slate-700 mb-2">{p.tagline}</p>
               <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-5">{p.body}</p>
@@ -190,7 +159,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
                 {p.tags.map(t => <span class="text-xs text-slate-500 bg-slate-100 rounded-full px-2.5 py-0.5">{t}</span>)}
               </div>
               <a href={`/projects/${p.slug}`}
-                 class={`inline-flex items-center justify-center gap-2 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5 ${p.btnClass}`}>
+                 class="inline-flex items-center justify-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5 hover:bg-indigo-500">
                 View project
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
@@ -252,10 +221,10 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   <section class="bg-slate-950 py-24">
     <div class="mx-auto max-w-2xl px-6 text-center">
       <h2 class="text-3xl font-bold text-white mb-4" style="font-family:'Space Grotesk',sans-serif">
-        Looking for an AI Consultant in the Netherlands?
+        Let's talk.
       </h2>
       <p class="text-slate-400 leading-relaxed mb-10">
-        Relocating to Amsterdam in 2026. Actively exploring roles in AI consulting, adoption, and product. EU citizen — no visa required.
+        I'm always up for a good conversation — about AI, building things, or where it's all heading. If something here resonated, reach out.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="mailto:carlos.dorronsoro.malaga@gmail.com"
