@@ -2,18 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 
 // Add new lab items here — just add an object to this array
-const items = [
-  {
-    title: "GEO — Geography Explorer",
-    description: "Explorador geográfico interactivo. Visualización de datos y mapas.",
-    url: "/lab/geo/index.html",
-    tags: ["HTML", "Maps", "Data Viz"],
-    date: "2026",
-    emoji: "🗺️",
-  },
-  // Add more lab items here:
-  // { title: "...", description: "...", url: "/lab/xxx/index.html", tags: ["..."], date: "2026", emoji: "..." },
-];
+// Add your lab items here when ready:
+// { title: "Name", description: "What it is.", url: "/lab/folder/index.html", tags: ["HTML"], date: "2026", emoji: "🔬" }
+const items: { title: string; description: string; url: string; tags: string[]; date: string; emoji: string }[] = [];
 ---
 
 <Layout title="Lab" description="Carlos Dorronsoro Málaga's lab — experiments, tools and projects in progress.">
@@ -21,9 +12,9 @@ const items = [
   <section class="bg-slate-950 pt-32 pb-16">
     <div class="mx-auto max-w-6xl px-6">
       <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-4 block">Lab</span>
-      <h1 class="text-4xl font-extrabold text-white mb-4" style="font-family:'Space Grotesk',sans-serif">Experimentos & Herramientas</h1>
+      <h1 class="text-4xl font-extrabold text-white mb-4" style="font-family:'Space Grotesk',sans-serif">Lab</h1>
       <p class="text-slate-400 text-lg max-w-2xl">
-        Un repositorio de cosas que construyo, pruebo o me parecen interesantes. Sin filtros, sin pulir. Proyectos en cualquier estado.
+        Experiments, tools and things I find interesting. No polish required.
       </p>
     </div>
   </section>
@@ -62,8 +53,8 @@ const items = [
 
       <div class="mt-16 p-6 bg-slate-50 rounded-2xl border border-dashed border-slate-300 text-center aos">
         <p class="text-slate-400 text-sm">
-          ¿Quieres añadir algo? Sube tu HTML a <code class="bg-white border border-slate-200 rounded px-1.5 py-0.5 text-xs font-mono">public/lab/nombre/</code>
-          y añade una entrada en <code class="bg-white border border-slate-200 rounded px-1.5 py-0.5 text-xs font-mono">src/pages/lab.astro</code>
+          More coming. Drop your HTML in <code class="bg-white border border-slate-200 rounded px-1.5 py-0.5 text-xs font-mono">public/lab/name/</code>
+          and add an entry in <code class="bg-white border border-slate-200 rounded px-1.5 py-0.5 text-xs font-mono">src/pages/lab.astro</code>
         </p>
       </div>
     </div>
