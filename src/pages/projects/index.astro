@@ -65,13 +65,13 @@ const statusClasses: Record<string, string> = {
           <div class="group rounded-2xl border border-slate-200 overflow-hidden hover:border-slate-300 hover:shadow-xl transition-all duration-300 bg-white">
 
             <!-- Visual preview header -->
-            <div class="h-64 relative overflow-hidden"
+            <div class="preview-frame h-64 relative overflow-hidden"
                  style={`background: linear-gradient(135deg, ${p.headerFrom}, ${p.headerTo})`}>
               {p.previewUrl ? (
                 <iframe
                   src={p.previewUrl}
-                  class="absolute top-0 left-0 border-0 pointer-events-none"
-                  style="width: 1440px; height: 900px; transform: scale(0.5); transform-origin: top left;"
+                  class="preview-iframe absolute top-0 left-0 border-0 pointer-events-none"
+                  style="width: 1440px; height: 900px; transform-origin: top left;"
                   loading="lazy"
                   aria-hidden="true"
                   tabindex="-1"
@@ -125,5 +125,18 @@ const statusClasses: Record<string, string> = {
       </div>
     </div>
   </section>
+
+<script>
+  function fitPreviews() {
+    document.querySelectorAll('.preview-frame').forEach(container => {
+      const iframe = container.querySelector('.preview-iframe');
+      if (!iframe) return;
+      const scale = container.clientWidth / 1440;
+      (iframe as HTMLElement).style.transform = `scale(${scale})`;
+    });
+  }
+  fitPreviews();
+  window.addEventListener('resize', fitPreviews);
+</script>
 
 </Layout>

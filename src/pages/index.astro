@@ -161,13 +161,13 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         ].map(p => (
           <div class="group flex flex-col rounded-2xl border border-slate-200 bg-white overflow-hidden hover:border-indigo-300 hover:shadow-lg transition-all">
             <!-- Card header: live preview or image -->
-            <div class="h-48 relative overflow-hidden"
+            <div class="preview-frame h-48 relative overflow-hidden"
                  style={`background: linear-gradient(135deg, ${p.headerFrom}, ${p.headerTo})`}>
               {p.previewUrl ? (
                 <iframe
                   src={p.previewUrl}
-                  class="absolute top-0 left-0 border-0 pointer-events-none"
-                  style="width: 1440px; height: 900px; transform: scale(0.25); transform-origin: top left;"
+                  class="preview-iframe absolute top-0 left-0 border-0 pointer-events-none"
+                  style="width: 1440px; height: 900px; transform-origin: top left;"
                   loading="lazy"
                   aria-hidden="true"
                   tabindex="-1"
@@ -273,5 +273,18 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       </div>
     </div>
   </section>
+
+<script>
+  function fitPreviews() {
+    document.querySelectorAll('.preview-frame').forEach(container => {
+      const iframe = container.querySelector('.preview-iframe');
+      if (!iframe) return;
+      const scale = container.clientWidth / 1440;
+      (iframe as HTMLElement).style.transform = `scale(${scale})`;
+    });
+  }
+  fitPreviews();
+  window.addEventListener('resize', fitPreviews);
+</script>
 
 </Layout>
