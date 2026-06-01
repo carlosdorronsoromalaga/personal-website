@@ -55,16 +55,33 @@ import Layout from '../../layouts/Layout.astro';
         </p>
       </div>
 
-      <div class="rounded-xl bg-indigo-950/50 border border-indigo-800/40 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div>
-          <p class="text-white font-semibold mb-1">See it live</p>
-          <p class="text-slate-400 text-sm">The app is deployed and running. URL will move off Netlify soon.</p>
+      <div>
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-white font-semibold text-xl">Live app</h2>
+          <a href="https://maalimundial2026.netlify.app" target="_blank" rel="noopener"
+             class="text-xs text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 shrink-0 ml-4">
+            Open full
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
-        <a href="https://maalimundial2026.netlify.app" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5 shrink-0">
-          Open app
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
+        <p class="text-slate-400 text-sm mb-4">Deployed and running. URL moving off Netlify soon.</p>
+        <div class="rounded-xl overflow-hidden border border-white/8">
+          <div class="bg-slate-800 px-4 py-2.5 flex items-center gap-3">
+            <div class="flex gap-1.5">
+              <div class="w-2.5 h-2.5 rounded-full bg-red-500/70"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/70"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-green-500/70"></div>
+            </div>
+            <span class="flex-1 bg-slate-700/60 rounded px-3 py-0.5 text-xs text-slate-400 font-mono text-center truncate">maalimundial2026.netlify.app</span>
+          </div>
+          <iframe
+            src="https://maalimundial2026.netlify.app"
+            class="w-full border-0 block bg-white"
+            style="height: 520px;"
+            loading="lazy"
+            title="WorldCup App — live"
+          ></iframe>
+        </div>
       </div>
 
       <div>
