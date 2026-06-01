@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carlosdorronsoromalaga.com/sitemap-index.xml

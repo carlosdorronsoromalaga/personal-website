@@ -10,44 +10,43 @@ const projects = [
     tags: ["Voice AI", "Healthcare", "Python", "LLM"],
     status: "Building",
     statusColor: "amber",
-    highlight: "Core insight: elderly users have the ability; the tech lacks the empathy.",
-    accentColor: "#f59e0b",
-    number: "01",
+    headerFrom: "#451a03",
+    headerTo: "#7c2d12",
+    iconPath: "M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3zm7 8v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8",
   },
   {
     slug: "edupath",
     name: "EduPath",
     tagline: "AI-driven personalised learning platform",
-    description: "Learning that adapts to you. EduPath uses LLMs to generate personalised curricula, track progress, and surface the right content at the right moment. Validated with real learners. Expanding.",
+    description: "Learning that adapts to you. EduPath uses LLMs to generate personalised curricula, track progress, and surface the right content at the right moment. First use cases validated with real learners. Building the transversal solution.",
     tags: ["EdTech", "LLM", "Product", "React"],
-    status: "Live",
-    statusColor: "emerald",
-    highlight: "Validated with real learners. Expanding.",
-    accentColor: "#10b981",
-    number: "02",
+    status: "Building",
+    statusColor: "amber",
+    headerFrom: "#022c22",
+    headerTo: "#134e4a",
+    iconPath: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z",
   },
   {
     slug: "worldcup-app",
     name: "WorldCup App",
     tagline: "A football prediction app built entirely with AI",
-    description: "From spec to deployed product using AI tools throughout: design, code, testing, deployment. An experiment in what AI-first development actually looks like end to end. 100% AI-assisted.",
-    tags: ["Full-stack", "AI-built", "React", "Experiment"],
-    status: "Shipped",
-    statusColor: "indigo",
-    highlight: "100% AI-assisted from zero to deployed.",
-    accentColor: "#6366f1",
-    number: "03",
+    description: "From spec to deployed product using AI tools throughout: design, code, testing, deployment. An experiment in what AI-first development actually looks like end to end. Built and shipped in under a week.",
+    tags: ["Full-stack", "AI-built", "React", "Deployed"],
+    status: "Live",
+    statusColor: "emerald",
+    headerFrom: "#1e1b4b",
+    headerTo: "#312e81",
+    iconPath: "M6 9H4a2 2 0 0 1-2-2V3h4m14 6h2a2 2 0 0 0 2-2V3h-4M8 21l1-3M16 21l-1-3M9 18h6M12 3v6M8 9l4 6 4-6",
   },
 ];
 
 const statusClasses: Record<string, string> = {
   amber: "text-amber-700 bg-amber-50 border border-amber-200",
   emerald: "text-emerald-700 bg-emerald-50 border border-emerald-200",
-  indigo: "text-indigo-700 bg-indigo-50 border border-indigo-200",
 };
 ---
 
-<Layout title="Projects" description="AI projects built by Carlos Dorronsoro Málaga: EVA, EduPath, WorldCup App.">
+<Layout title="Projects" description="AI projects built by Carlos Dorronsoro Málaga: EVA (voice AI for elderly users), EduPath (personalised learning with LLMs), WorldCup App (AI-first full-stack development).">
 
   <section class="bg-slate-950 pt-32 pb-16">
     <div class="mx-auto max-w-5xl px-6">
@@ -68,15 +67,15 @@ const statusClasses: Record<string, string> = {
             class="group block bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-slate-300 hover:shadow-xl transition-all duration-300"
           >
             <div class="flex flex-col md:flex-row">
-              <!-- Left accent bar + number -->
+              <!-- Visual image area -->
               <div
-                class="md:w-24 flex md:flex-col items-center justify-center gap-2 px-6 py-5 md:py-8 shrink-0"
-                style={`background-color:${p.accentColor}15; border-right: 3px solid ${p.accentColor}30`}
+                class="md:w-56 h-40 md:h-auto flex items-center justify-center relative overflow-hidden shrink-0"
+                style={`background: linear-gradient(135deg, ${p.headerFrom}, ${p.headerTo})`}
               >
-                <span
-                  class="font-mono text-2xl font-bold"
-                  style={`color:${p.accentColor}`}
-                >{p.number}</span>
+                <div class="absolute inset-0" style="background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.05), transparent 60%)"></div>
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="relative z-10">
+                  <path d={p.iconPath}/>
+                </svg>
               </div>
 
               <!-- Main content -->
@@ -111,7 +110,6 @@ const statusClasses: Record<string, string> = {
         ))}
       </div>
 
-      <!-- Bottom note -->
       <div class="mt-12 p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center">
         <p class="text-slate-500 text-sm">
           More experiments in progress. The best ideas are still half-formed.
