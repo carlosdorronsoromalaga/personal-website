@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="EduPath · AI-Driven Learning Platform" description="EduPath uses LLMs to generate personalised learning curricula that adapt to each learner.">
+  <div class="bg-slate-950 min-h-screen">
   <div class="mx-auto max-w-3xl px-6 pt-32 pb-24">
 
     <a href="/projects" class="text-sm text-slate-500 hover:text-white transition-colors mb-8 inline-block">← All projects</a>
@@ -15,7 +16,7 @@ import Layout from '../../layouts/Layout.astro';
 
     <div class="space-y-8">
 
-      <div class="rounded-xl border-l-4 border-blue-500 bg-slate-900/60 p-6">
+      <div class="rounded-xl border-l-4 border-emerald-500 bg-slate-900/60 p-6">
         <p class="text-slate-300 text-lg leading-relaxed font-medium">
           "Learning should adapt to you. Not the other way around."
         </p>
@@ -24,21 +25,23 @@ import Layout from '../../layouts/Layout.astro';
       <div>
         <h2 class="text-white font-semibold text-xl mb-3">The problem</h2>
         <p class="text-slate-400 leading-relaxed">
-          Most learning platforms give everyone the same content in the same order. That's not how people learn. Some need more context, others need to skip ahead. The content that works for one person bores or overwhelms another.
+          Traditional learning is expensive, rigid, and one-size-fits-all. Masters programmes cost tens of thousands. Online courses don't adapt. The result: people either overpay for structure they don't need, or get lost in a sea of content with no clear path.
         </p>
       </div>
 
       <div>
-        <h2 class="text-white font-semibold text-xl mb-3">What EduPath does</h2>
+        <h2 class="text-white font-semibold text-xl mb-3">How it works</h2>
+        <p class="text-slate-400 leading-relaxed mb-4">EduPath uses LLMs to generate personalised learning programmes from scratch. The input is simple: your goal and your starting point. The output is a structured, actionable path built around you.</p>
         <ul class="space-y-3">
           {[
-            "Generates a personalised learning curriculum based on your goals and current level",
-            "Adapts content complexity and pacing as you progress",
-            "Surfaces the right resources at the right time",
-            "Tracks progress and identifies gaps proactively",
+            "Fully personalised curriculum based on specific goals and current knowledge level",
+            "Dynamic structure that evolves as you progress and your needs change",
+            "Ability to go deep into specific topics or skip what's already known",
+            "Combines courses, articles, videos and other formats into a single coherent path",
+            "High-quality learning at a fraction of the cost of traditional programmes",
           ].map(item => (
             <li class="flex gap-3 text-slate-400">
-              <span class="text-blue-400 mt-0.5 shrink-0">▸</span>
+              <span class="text-emerald-400 mt-0.5 shrink-0">▸</span>
               <span>{item}</span>
             </li>
           ))}
@@ -46,10 +49,27 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
       <div>
-        <h2 class="text-white font-semibold text-xl mb-3">Status</h2>
+        <h2 class="text-white font-semibold text-xl mb-3">Where we are</h2>
         <p class="text-slate-400 leading-relaxed">
-          Validated with real learners. Currently live and expanding, working on additional subject areas and improving the adaptation algorithm based on real usage data.
+          First version built, tested and validated with real learners. The initial use case has been delivered and iterated on based on real feedback. Now evolving from a specific implementation into a more scalable and repeatable system.
         </p>
+      </div>
+
+      <div>
+        <h2 class="text-white font-semibold text-xl mb-3">Key learnings</h2>
+        <ul class="space-y-2">
+          {[
+            "Structure matters as much as content: a well-ordered path is half the work",
+            "AI adds real value in personalisation, not just content generation",
+            "Users need direction more than they need options",
+            "Iterating based on actual usage reveals things no planning session will",
+          ].map(item => (
+            <li class="flex gap-3 text-slate-400">
+              <span class="text-slate-600 mt-0.5 shrink-0">·</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
     </div>
@@ -60,5 +80,6 @@ import Layout from '../../layouts/Layout.astro';
       ))}
     </div>
 
+  </div>
   </div>
 </Layout>

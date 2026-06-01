@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="WorldCup App · Built 100% with AI" description="A football prediction app built entirely with AI tools, from spec to deployed product.">
+  <div class="bg-slate-950 min-h-screen">
   <div class="mx-auto max-w-3xl px-6 pt-32 pb-24">
 
     <a href="/projects" class="text-sm text-slate-500 hover:text-white transition-colors mb-8 inline-block">← All projects</a>
@@ -15,23 +16,42 @@ import Layout from '../../layouts/Layout.astro';
 
     <div class="space-y-8">
 
-      <div class="rounded-xl border-l-4 border-blue-500 bg-slate-900/60 p-6">
+      <div class="rounded-xl border-l-4 border-indigo-500 bg-slate-900/60 p-6">
         <p class="text-slate-300 text-lg leading-relaxed font-medium">
-          "What does AI-first development actually look like end to end? I built this to find out."
+          "What does AI-first development actually look like, end to end? I built this to find out."
         </p>
       </div>
 
       <div>
-        <h2 class="text-white font-semibold text-xl mb-3">The experiment</h2>
+        <h2 class="text-white font-semibold text-xl mb-3">The context</h2>
         <p class="text-slate-400 leading-relaxed">
-          This project was an intentional experiment: build a complete, working product from scratch using AI tools throughout: design, code, testing, deployment. No templates, no pre-built components borrowed from previous work. Start to shipped with AI as the primary tool.
+          A team initiative to run a World Cup office pool was about to be managed through a shared Excel. Manual scoring, no real-time updates, low engagement. I decided to build the real thing instead: a full web app, in less than a week, using AI throughout.
         </p>
       </div>
 
       <div>
-        <h2 class="text-white font-semibold text-xl mb-3">What it is</h2>
+        <h2 class="text-white font-semibold text-xl mb-3">What I built</h2>
+        <p class="text-slate-400 leading-relaxed mb-4">End-to-end web application replacing the spreadsheet approach entirely.</p>
+        <ul class="space-y-3">
+          {[
+            "Match prediction system for all participants",
+            "Real-time leaderboard with automated scoring",
+            "Live visibility of other users' predictions",
+            "Social layer with chat between participants",
+            "Admin panel for result management and system updates",
+          ].map(item => (
+            <li class="flex gap-3 text-slate-400">
+              <span class="text-indigo-400 mt-0.5 shrink-0">▸</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-white font-semibold text-xl mb-3">The AI-first approach</h2>
         <p class="text-slate-400 leading-relaxed">
-          A football prediction and tournament management app for the World Cup. Users submit predictions, track results, and compete on a leaderboard. Full-stack: React frontend, backend API, deployed and live.
+          Design, code, testing, deployment: AI tools were the primary instrument throughout. From spec to shipped in under a week. Not a prototype, a working product used by a real team.
         </p>
       </div>
 
@@ -39,10 +59,11 @@ import Layout from '../../layouts/Layout.astro';
         <h2 class="text-white font-semibold text-xl mb-3">What I learned</h2>
         <ul class="space-y-2">
           {[
-            "AI accelerates dramatically on boilerplate, but the hard parts are still hard",
-            "Prompt quality matters more than model choice for complex logic",
-            "Debugging AI-generated code requires understanding it, not just running it",
-            "You ship faster, but you also ship bugs faster, so testing discipline is non-negotiable",
+            "AI compresses timelines drastically on boilerplate, but the hard parts remain hard",
+            "Prompt quality matters more than model choice when the logic gets complex",
+            "Debugging AI-generated code requires genuine understanding, not just running it",
+            "You ship faster, but you also ship bugs faster. Testing discipline is non-negotiable.",
+            "A simple need, turned into a product, creates engagement that a spreadsheet never could",
           ].map(item => (
             <li class="flex gap-3 text-slate-400">
               <span class="text-slate-600 mt-0.5 shrink-0">·</span>
@@ -60,5 +81,6 @@ import Layout from '../../layouts/Layout.astro';
       ))}
     </div>
 
+  </div>
   </div>
 </Layout>

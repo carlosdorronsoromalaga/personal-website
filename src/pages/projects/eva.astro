@@ -3,17 +3,18 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="EVA · Voice AI for Elderly Users" description="EVA is a voice-first AI companion designed for elderly users. The problem isn't ability; it's that technology isn't designed for them.">
+  <div class="bg-slate-950 min-h-screen">
   <div class="mx-auto max-w-3xl px-6 pt-32 pb-24">
 
     <a href="/projects" class="text-sm text-slate-500 hover:text-white transition-colors mb-8 inline-block">← All projects</a>
 
     <div class="mb-2">
-      <span class="text-xs font-medium text-yellow-400 bg-yellow-950/50 rounded px-2.5 py-1">In validation</span>
+      <span class="text-xs font-medium text-amber-400 bg-amber-950/50 rounded px-2.5 py-1">Building</span>
     </div>
     <h1 class="text-4xl font-bold text-white mt-4 mb-2">EVA</h1>
     <p class="text-xl text-slate-400 mb-10">Voice-first AI companion for elderly users.</p>
 
-    <div class="prose-custom space-y-8">
+    <div class="space-y-8">
 
       <div class="rounded-xl border-l-4 border-blue-500 bg-slate-900/60 p-6">
         <p class="text-slate-300 text-lg leading-relaxed font-medium">
@@ -24,22 +25,23 @@ import Layout from '../../layouts/Layout.astro';
       <div>
         <h2 class="text-white font-semibold text-xl mb-3">The problem</h2>
         <p class="text-slate-400 leading-relaxed">
-          Elderly users are consistently underserved by tech. Smartphones are complex, apps require visual attention, voice assistants are built for younger, faster users. The capability is there; the design empathy isn't. I watched this first-hand.
+          Elderly users are systematically excluded from modern technology. Not because of lack of ability, but because technology isn't designed for them. Smartphones are too complex. Interfaces rely on habits they've never built. Voice assistants are tuned for speed, not patience. I saw this first-hand, and I couldn't leave it alone.
         </p>
       </div>
 
       <div>
-        <h2 class="text-white font-semibold text-xl mb-3">What EVA does</h2>
-        <p class="text-slate-400 leading-relaxed mb-4">Simple model: press a button, speak. That's it.</p>
+        <h2 class="text-white font-semibold text-xl mb-3">The solution</h2>
+        <p class="text-slate-400 leading-relaxed mb-4">One interaction model: press a button, speak. That's it. From there, EVA handles the rest.</p>
         <ul class="space-y-3">
           {[
-            "Reminders and calendar management via voice",
-            "Answers questions in plain, accessible language",
+            "Reminders and calendar management via natural voice",
+            "Answers questions in plain, patient language",
             "Initiates and manages calls",
-            "No app, no screen navigation, no complexity",
+            "Provides daily context ('what do I have tomorrow?')",
+            "No apps, no screens, no learning curve",
           ].map(item => (
             <li class="flex gap-3 text-slate-400">
-              <span class="text-blue-400 mt-0.5 shrink-0">▸</span>
+              <span class="text-amber-400 mt-0.5 shrink-0">▸</span>
               <span>{item}</span>
             </li>
           ))}
@@ -47,16 +49,16 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
       <div>
-        <h2 class="text-white font-semibold text-xl mb-3">Design principles</h2>
+        <h2 class="text-white font-semibold text-xl mb-3">What makes this hard</h2>
         <p class="text-slate-400 leading-relaxed">
-          Latency matters enormously: a 3-second pause destroys trust with elderly users. Simplicity isn't a feature, it's the whole product. One wrong answer can damage trust permanently. The technical challenge is minimal compared to the UX challenge.
+          The technical complexity is manageable. The real challenge is trust. Latency matters enormously: a 3-second pause is confusion, not patience. Every added feature is a potential failure point. One wrong answer can end the relationship. The product isn't functionality, it's confidence.
         </p>
       </div>
 
       <div>
         <h2 class="text-white font-semibold text-xl mb-3">Where we are</h2>
         <p class="text-slate-400 leading-relaxed">
-          Concept design and system architecture complete. Currently in validation: testing whether elderly users will understand, desire, and trust the product before committing to full development. Real users first. Code later.
+          Product vision, system architecture and MVP scope defined. Currently in user validation: testing whether real elderly users understand it, want it, and actually use it before committing to full development. Real evidence first. Code second.
         </p>
       </div>
 
@@ -64,10 +66,11 @@ import Layout from '../../layouts/Layout.astro';
         <h2 class="text-white font-semibold text-xl mb-3">Key learnings</h2>
         <ul class="space-y-2">
           {[
-            "Voice latency is the #1 UX killer: sub-1s response is non-negotiable",
-            "Fewer features = more trust. Every added option is a potential point of failure",
-            "Trust is fragile. One confusing response can end the relationship",
-            "The real product is confidence, not functionality",
+            "Voice latency is the #1 UX variable: sub-1s response is non-negotiable",
+            "Simplicity isn't a design choice — it's the entire product strategy",
+            "Trust is fragile and asymmetric. Easy to break, slow to rebuild",
+            "Designing for elderly users requires rethinking every assumption about usability",
+            "Validation in real environments beats any amount of desk research",
           ].map(item => (
             <li class="flex gap-3 text-slate-400">
               <span class="text-slate-600 mt-0.5 shrink-0">·</span>
@@ -85,5 +88,6 @@ import Layout from '../../layouts/Layout.astro';
       ))}
     </div>
 
+  </div>
   </div>
 </Layout>

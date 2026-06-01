@@ -8,6 +8,11 @@ interface Props {
 
 const { title, description = "Carlos Dorronsoro Málaga · AI Consultant & Builder. Helping organisations adopt AI that actually works." } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+const navActive = (href: string) =>
+  (href === '/' ? path === '/' : path.startsWith(href))
+    ? 'text-white'
+    : 'hover:text-white';
 ---
 
 <!doctype html>
@@ -36,10 +41,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           Carlos <span class="text-indigo-400">Dorronsoro Málaga</span>
         </a>
         <ul class="hidden md:flex items-center gap-7 text-sm text-slate-400">
-          <li><a href="/about" class="hover:text-white transition-colors">About</a></li>
-          <li><a href="/projects" class="hover:text-white transition-colors">Projects</a></li>
-          <li><a href="/lab" class="hover:text-white transition-colors">Lab</a></li>
-          <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="/about" class={`${navActive('/about')} transition-colors`}>About</a></li>
+          <li><a href="/projects" class={`${navActive('/projects')} transition-colors`}>Projects</a></li>
+          <li><a href="/lab" class={`${navActive('/lab')} transition-colors`}>Lab</a></li>
+          <li><a href="/blog" class={`${navActive('/blog')} transition-colors`}>Blog</a></li>
           <li>
             <a href="/contact" class="rounded-lg bg-indigo-600 px-4 py-2 text-white font-medium hover:bg-indigo-500 transition-colors">
               Contact
