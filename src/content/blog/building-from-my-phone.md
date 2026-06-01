@@ -19,4 +19,10 @@ I work in AI consulting. I spend a lot of time thinking about how AI changes the
 
 And the quality is real. That's the part that still surprises me. This isn't rough sketches that need redoing later. It's the actual thing, running, deployable, good. Claude Code doesn't just write code. It understands what I'm trying to build, handles the parts that don't need me, and lets me focus on the parts that do.
 
-I don't think I'll go back to needing a dedicated block of time to build things. The constraint that used to gate most of my side projects, finding the time, has mostly dissolved. What's left is the harder part: having something worth building.
+The computer is still essential for some things: deep work, complex debugging, anything that needs a big screen and full focus. But the potential of building from wherever you are is real, and it's largely untapped. The time is there. The dead hours in transit, the gaps between meetings, the minutes you'd otherwise lose. They add up to something if the barrier to starting is low enough.
+
+I think about how many side projects never get off the ground not because the idea was bad, but because life never produces that clean two-hour window. Most ideas die waiting. The tools are changing that. If you can make meaningful progress in fifteen minutes, then fifteen minutes is enough to keep something alive. Enough to iterate. Enough to ship, eventually.
+
+That's what I've noticed more than anything: things that used to stall, don't. Not because I have more time, but because I need less of it in one go. The project stays warm. The momentum doesn't reset every time a week passes without a proper session.
+
+A phone doesn't replace a workstation. The computer is where the serious sessions happen: the deep dives, the hard debugging, the work that needs space and concentration. But mobile complements it better than most people realise. The ideas stay alive between sessions. The small decisions get made. The project keeps moving. And when you finally sit down at your desk, you're not starting from zero. You're picking up something that was already in motion.
